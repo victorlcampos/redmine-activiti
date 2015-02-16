@@ -9,4 +9,7 @@ Redmine::Plugin.register :redmine_activiti do
 
   require 'redmine_activiti/hooks/success_authentication_after_hook'
   require 'redmine_activiti/hooks/controller_issues_new_after_save_hook'
+  require 'redmine_activiti/hooks/custom_field_hook'
+
+  Issue.send(:include, RedmineActiviti::Patches::Customizable) unless Issue.included_modules.include?(RedmineActiviti::Patches::Customizable)
 end
