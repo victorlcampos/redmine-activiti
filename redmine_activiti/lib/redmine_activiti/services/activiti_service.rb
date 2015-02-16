@@ -18,12 +18,35 @@ module RedmineActiviti
 
       def start_process
         @params[:body] = {
-          'processDefinitionKey' => @issue.tracker.process_id
+          'processDefinitionKey' => processDefinitionKey,
+          'variables' => variables
         }.to_json
 
-        pd = self.class.post("/runtime/process-instances", @params)
+        response = self.class.post("/runtime/process-instances", @params)
+
+        return if response.code == 201
+
+        raise 'Start proccess Error'
+      end
+
+      protected
+
+      def processDefinitionKey
+        @processDefinitionKey ||= @issue.tracker.process_id
+      end
+
+      def processDefinition
+        @processDefinition ||= self.class.get("/repository/process-definitions", @params.merge(query: {key: processDefinitionKey, latest: true}))["data"][0]
+      end
+
+      def variables
+        @variables ||= self.class.get("/form/form-data", @params.merge(query: { processDefinitionId: processDefinition['id'] }))['formProperties'].map do |h|
+          {
+            'name' => h['id'],
+            'value' => @issue.send(h['id'])
+          }
+        end
       end
     end
-
   end
 end
