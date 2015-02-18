@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pi:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:al="http://eclipse.org/graphiti/mm/algorithms" xmlns:pi="http://eclipse.org/graphiti/mm/pictograms" visible="true" gridUnit="-1" diagramTypeId="KickstartFormDiagram" name="Redmine" snapToGrid="true" version="0.10.0">
+  <graphicsAlgorithm xsi:type="al:Rectangle" background="//@styles.0/@renderingStyle/@adaptedGradientColoredAreas/@adaptedGradientColoredAreas.0/@gradientColor.0/@start/@color" foreground="//@colors.0" lineWidth="1" transparency="0.0" width="1000" height="1000"/>
+  <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <properties key="independentObject" value="379905812"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="610" height="100" x="15" y="10">
+      <graphicsAlgorithmChildren xsi:type="al:Rectangle" background="//@colors.1" lineWidth="0" lineStyle="UNSPECIFIED" lineVisible="false" width="2" height="1000"/>
+      <graphicsAlgorithmChildren xsi:type="al:Polygon" foreground="//@colors.2" lineStyle="UNSPECIFIED" lineVisible="true">
+        <points x="5" y="25"/>
+        <points x="610" y="25"/>
+      </graphicsAlgorithmChildren>
+    </graphicsAlgorithm>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:MultiText" lineWidth="0" filled="false" transparency="0.0" width="600" height="25" x="5" font="//@fonts.1" verticalAlignment="ALIGNMENT_TOP" value="Info"/>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="independentObject" value="1595063717"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="600" height="45" x="5" y="40">
+        <graphicsAlgorithmChildren xsi:type="al:RoundedRectangle" lineWidth="1" transparency="0.0" width="600" height="25" y="20" style="//@styles.0" cornerHeight="2" cornerWidth="2"/>
+      </graphicsAlgorithm>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" lineWidth="1" filled="false" transparency="0.0" width="600" height="20" font="//@fonts.0" verticalAlignment="ALIGNMENT_TOP" value="Text input"/>
+      </children>
+    </children>
+  </children>
+  <styles foreground="//@colors.2" lineWidth="20" id="input-field-rectangle">
+    <renderingStyle>
+      <adaptedGradientColoredAreas definedStyleId="input-field-rectangle" gradientType="0">
+        <adaptedGradientColoredAreas styleAdaption="0">
+          <gradientColor>
+            <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+              <color red="255" green="255" blue="255"/>
+            </start>
+            <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="3">
+              <color red="255" green="255" blue="255"/>
+            </end>
+          </gradientColor>
+          <gradientColor>
+            <start locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="3">
+              <color red="255" green="255" blue="255"/>
+            </start>
+            <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+              <color red="171" green="171" blue="171"/>
+            </end>
+          </gradientColor>
+        </adaptedGradientColoredAreas>
+      </adaptedGradientColoredAreas>
+    </renderingStyle>
+  </styles>
+  <colors red="227" green="238" blue="249"/>
+  <colors red="180" green="180" blue="180"/>
+  <colors/>
+  <fonts name="Arial" size="8"/>
+  <fonts name="Arial" size="15"/>
+</pi:Diagram>
